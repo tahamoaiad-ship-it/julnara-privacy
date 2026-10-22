@@ -5,10 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Privacy Policy — Julnara Pop</title>
   <style>
-    body { font-family: "Segoe UI", system-ui, sans-serif; max-width: 42rem; margin: 2rem auto; padding: 0 1rem; line-height: 1.6; color: #1a1a1a; }
-    h1 { font-size: 1.5rem; } h2 { font-size: 1.15rem; margin-top: 1.5rem; }
-    nav { margin: 1rem 0 2rem; }
-    nav a { margin-right: 1rem; }
+    body { font-family: "Segoe UI", system-ui, sans-serif; max-width: 42rem; margin: 2rem auto; padding: 0 1rem; line-height: 1.65; color: #1a1a1a; }
+    h1 { font-size: 1.5rem; } h2 { font-size: 1.15rem; margin-top: 1.6rem; }
+    nav { margin: 1rem 0 1.5rem; } nav a { margin-right: 1rem; }
     .meta { color: #555; font-size: 0.95rem; }
   </style>
 </head>
@@ -17,37 +16,61 @@
     <a href="index.html" lang="ar" dir="rtl">العربية</a>
     <a href="en.html" lang="en">English</a>
   </nav>
+
   <h1>Privacy Policy — Julnara Pop</h1>
-  <p class="meta">Last updated: 22 October 2026 · Age rating: 18+</p>
+  <p class="meta">Last updated: 22 October 2026 · Free app · Age rating: 18+</p>
 
-  <h2>Who we are</h2>
-  <p>Julnara Pop («جلنارا بوب») is a personal on-phone voice helper. This policy explains what is collected and how it is used.</p>
+  <h2>1. Who is Julnara?</h2>
+  <p>Julnara Pop («جلنارا بوب») is a personal Android voice helper. She wakes on the phrase «جلنارا», answers in her product voice («Ghada» when enabled), and runs commands such as tasks, reminders, and flashlight. She has a warm Syrian persona; open-ended AI chat means the app is for users 18+.</p>
 
-  <h2>What we collect</h2>
+  <h2>2. Privacy principles</h2>
   <ul>
-    <li><strong>On device:</strong> wake-phrase samples of «جلنارا» for speaker enrollment; tasks, reminders, notes, and optional memory. Stored locally where possible.</li>
-    <li><strong>When server/chat is enabled:</strong> command or reply text may be sent to a processing server for speech understanding and answers. We do not keep raw voice recordings as a permanent cloud voice archive.</li>
-    <li><strong>Optional Connect contribution:</strong> text/audio you choose to send only after explicit consent.</li>
+    <li><strong>On-device first:</strong> wake detection, owner-voice enrollment, tasks, reminders, and optional memory stay on your phone where possible.</li>
+    <li><strong>No sale of your data.</strong> No ads built from your chats.</li>
+    <li><strong>No permanent cloud voice archive of your voice.</strong> Owner audio is not uploaded or stored without explicit consent.</li>
+    <li><strong>API secrets</strong> stay on the server, not inside the app binary.</li>
   </ul>
 
-  <h2>What we do not do</h2>
+  <h2>3. What stays on your phone</h2>
   <ul>
-    <li>We do not store your voice as a permanent cloud voice database.</li>
-    <li>We do not use your chats to train public AI models unless you explicitly opt in to contribution/training (optional; off by default).</li>
-    <li>We do not sell your data.</li>
-    <li>Version 1.0 does not require in-app purchase accounts; any operator cost caps are on the developer side and are not billed to you as a mandatory subscription under this policy.</li>
+    <li>Wake-phrase samples of «جلنارا» for speaker enrollment (first-run: about 20 samples).</li>
+    <li>Tasks, reminders, notes, and optional memory if you use those features.</li>
+    <li>Language settings, consents, and listening state.</li>
+    <li>A per-install device id when linked to the server (for rate limits — not advertising).</li>
   </ul>
 
-  <h2>Permissions</h2>
-  <p>Microphone for wake and commands. Notifications for reminders. Other permissions only when you opt into a specific in-scope feature.</p>
+  <h2>4. When the server is used</h2>
+  <p>For speech understanding and general chat, <strong>text</strong> of your request (after speech-to-text) may go to the Julnara server run by the developer — currently on the developer’s PC via a secure HTTPS tunnel, and later possibly on cloud hosting under the same privacy rules.</p>
+  <ul>
+    <li>The server may call processing providers (language understanding or spoken replies) <strong>only to serve you</strong>, under operator spend caps — not to sell your data as a product.</li>
+    <li>We do not keep raw voice recordings as a lasting cloud voice database.</li>
+    <li>Operational logs are designed to avoid full conversation text where the product requires it.</li>
+  </ul>
 
-  <h2>Age</h2>
-  <p>The app is intended for users 18 years and older (playful conversational persona and open-ended AI chat).</p>
+  <h2>5. Optional Connect screen</h2>
+  <p>In-app text/voice chat with Julnara. Sending contributions to the developer happens only after explicit consent and a send action you choose. You can withdraw where settings allow.</p>
 
-  <h2>Your rights</h2>
-  <p>You can delete owner data where in-app deletion screens exist, withdraw consents, and uninstall the app to remove local data.</p>
+  <h2>6. Permissions</h2>
+  <ul>
+    <li><strong>Microphone:</strong> wake, commands, and the foreground listening service when enabled.</li>
+    <li><strong>Notifications:</strong> reminders and alerts.</li>
+    <li><strong>Internet:</strong> when using the server path.</li>
+    <li>Other permissions (e.g. optional overlay) only if you opt into that feature.</li>
+  </ul>
+  <p>Version 1.0 does not require camera, contacts, or precise location as core product permissions.</p>
 
-  <h2>Contact</h2>
-  <p>For privacy questions about Julnara Pop, email the developer at: <a href="mailto:tahamoaiad@gmail.com">tahamoaiad@gmail.com</a></p>
+  <h2>7. Children and billing</h2>
+  <p>Not directed at users under 18. Version 1.0 has no mandatory in-app subscription; operator cost caps are on the developer side and are not billed to you under this policy.</p>
+
+  <h2>8. Your rights</h2>
+  <ul>
+    <li>Delete owner data in-app where deletion screens exist.</li>
+    <li>Withdraw consents and stop listening.</li>
+    <li>Uninstall to remove local data on the device.</li>
+  </ul>
+  <p>Note: uninstall clears wake enrollment and local tasks/reminders unless you copied them manually first (no full automatic export in 1.0).</p>
+
+  <h2>9. Contact</h2>
+  <p>Privacy questions about Julnara Pop: <a href="mailto:tahamoaiad@gmail.com">tahamoaiad@gmail.com</a></p>
 </body>
 </html>
