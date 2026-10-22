@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Privacy Policy — Julnara</title>
+  <title>Privacy Policy — Julnara Pop</title>
   <style>
     body { font-family: "Segoe UI", system-ui, sans-serif; max-width: 42rem; margin: 2rem auto; padding: 0 1rem; line-height: 1.65; color: #1a1a1a; }
     h1 { font-size: 1.5rem; } h2 { font-size: 1.15rem; margin-top: 1.6rem; }
@@ -17,64 +17,48 @@
     <a href="en.html" lang="en">English</a>
   </nav>
 
-  <h1>Privacy Policy — Julnara</h1>
-  <p class="meta">Last updated: 22 October 2026 · Free · 18+</p>
+  <h1>Privacy Policy — Julnara Pop</h1>
+  <p class="meta">Last updated: 22 October 2026 · Free · 18+ · package <code>app.julnara.mobile</code></p>
 
-  <h2>1. Who is Julnara?</h2>
-  <p>Julnara is a personal Android voice helper (package <code>app.julnara.mobile</code>). She wakes on «جلنارا», answers in the product voice («Ghada» when enabled via the server), and runs commands such as tasks, reminders, and flashlight. Playful Syrian persona and open-ended AI chat mean the app is for users 18+.</p>
+  <h2>1. Who we are</h2>
+  <p>Julnara Pop is an Android voice assistant. Wake phrase detection for «جلنارا» runs on-device. After a wake, command audio and text may be sent to the developer’s server and processed by OpenAI and ElevenLabs to transcribe, understand, and speak replies (product voice «Ghada» when enabled). The app is for users 18+.</p>
 
-  <h2>2. Privacy principles</h2>
+  <h2>2. What we collect and how it is processed</h2>
   <ul>
-    <li><strong>On-device first:</strong> wake detection, owner enrollment, tasks, reminders, and optional memory stay on the phone where possible.</li>
-    <li><strong>We do not sell your data</strong> or use chats for advertising.</li>
-    <li><strong>No permanent cloud voice archive</strong> of your voice.</li>
-    <li><strong>Provider API keys</strong> stay on the developer’s server, not in the app binary.</li>
+    <li><strong>On-device wake audio:</strong> about 20 enrollment samples of «جلنارا» stay on the device for speaker/wake matching. Not uploaded as a voice archive.</li>
+    <li><strong>Command audio after wake:</strong> sent over HTTPS to the developer server (<code>/v1/hear</code>) and to OpenAI speech-to-text. Processed ephemerally; we do not keep a permanent audio archive of your commands.</li>
+    <li><strong>Command / reply text:</strong> sent to the server (<code>/v1/understand</code>) and may be passed to OpenAI Chat for an AI reply when the cloud path is active.</li>
+    <li><strong>Spoken replies:</strong> reply text is converted to speech via ElevenLabs or OpenAI Speech on the server (<code>/v1/speak</code>) and returned to the device for playback.</li>
+    <li><strong>Install / device token:</strong> created to bind the install to the server for spend and abuse limits — not for advertising.</li>
+    <li><strong>Local data:</strong> tasks, reminders, notes, settings on device.</li>
+    <li><strong>Connect (optional):</strong> text/audio you explicitly choose to send.</li>
+    <li><strong>In-app report:</strong> may send a description of an inappropriate AI reply to the server for review.</li>
   </ul>
 
-  <h2>3. Data on your device</h2>
+  <h2>3. Processors</h2>
+  <p>The developer server calls <strong>OpenAI</strong> (transcription and/or chat and/or speech) and <strong>ElevenLabs</strong> (Ghada TTS when enabled). API keys stay on the server, not in the APK. Transit is HTTPS.</p>
+
+  <h2>4. Retention</h2>
   <ul>
-    <li>Wake-phrase samples of «جلنارا» (first-run ~20 samples) for on-device speaker enrollment.</li>
-    <li>Tasks, reminders, notes, and optional memory if you use them.</li>
-    <li>Language settings, consents, listening state.</li>
-    <li>Per-install device id when linked to the server (rate limits — not ads).</li>
+    <li>Audio: ephemeral processing on server/processors — no permanent voice archive.</li>
+    <li>Text/logs: may be kept briefly for operations and spend limits, with conversation content minimized where the design allows.</li>
+    <li>Device token and spend counters on the server while you use the service.</li>
   </ul>
 
-  <h2>4. Server and cloud processing (when enabled)</h2>
-  <p>When the server path is enabled, the app may send to the developer-operated Julnara server (currently the developer’s PC via a public HTTPS tunnel; later possibly cloud hosting under the same rules):</p>
+  <h2>5. Deletion</h2>
+  <p>In-app «احذف بياناتي» / Delete my data (confirm dialog; fails closed without a valid subject where required). Email us below. Uninstalling clears local app data.</p>
+
+  <h2>6. Permissions</h2>
   <ul>
-    <li><strong>A short command audio clip</strong> to speech-to-text (<code>/v1/hear</code>) for immediate processing — not for building a lasting voice database.</li>
-    <li><strong>Request/reply text</strong> for understanding and answers; providers (e.g. OpenAI for transcription/understanding, ElevenLabs or another voice path for spoken replies) are used <strong>only to serve you</strong>, under the developer’s spend caps.</li>
-    <li>A registered device token plus per-device and monthly rate/spend limits on the server.</li>
-    <li>Operational logs are designed to minimize or strip full conversation text where the product requires it.</li>
-  </ul>
-  <p>Offline or when the server is unreachable, local commands (e.g. time, flashlight, tasks) still work within the build’s capabilities.</p>
-
-  <h2>5. Optional Connect screen</h2>
-  <p>In-app text/voice chat with Julnara. Contributions or uploads to the developer happen only after explicit consent and a send you choose. Withdraw where settings allow.</p>
-
-  <h2>6. Permissions (aligned with the 1.0 manifest)</h2>
-  <ul>
-    <li><strong>Microphone</strong> + microphone foreground service: wake and commands while listening is enabled.</li>
-    <li><strong>Notifications:</strong> reminders and alerts.</li>
-    <li><strong>Internet:</strong> server path.</li>
-    <li><strong>Flashlight / optional non-required camera features:</strong> torch only; full CAMERA permission is not required for 1.0.</li>
-    <li><strong>Exact alarm scheduling + system SET_ALARM:</strong> reminders and handing off to the Clock app when needed.</li>
-    <li><strong>Boot completed:</strong> resume reminders/service as designed.</li>
-    <li><strong>System alert window (optional):</strong> floating Julnara face if you opt in.</li>
-  </ul>
-  <p>Version 1.0 does <strong>not</strong> rely on camera, contacts, precise location, Bluetooth, or reading other apps’ notifications as core product features.</p>
-
-  <h2>7. Children and billing</h2>
-  <p>Not directed at users under 18. No mandatory in-app subscription in 1.0; operator cost caps are on the developer, not billed to you under this policy.</p>
-
-  <h2>8. Your rights</h2>
-  <ul>
-    <li>Delete owner data where in-app screens exist.</li>
-    <li>Withdraw consents and stop listening.</li>
-    <li>Uninstall to clear local data (removes wake enrollment and local tasks/reminders; no full automatic export in 1.0).</li>
+    <li>Microphone + microphone foreground service: wake and commands.</li>
+    <li>Internet: server and processors.</li>
+    <li>Notifications, exact alarms, set alarm, boot completed, optional overlay.</li>
   </ul>
 
-  <h2>9. Contact</h2>
+  <h2>7. Children and ads</h2>
+  <p>18+ only. No ads. We do not sell your data.</p>
+
+  <h2>8. Contact</h2>
   <p><a href="mailto:tahamoaiad@gmail.com">tahamoaiad@gmail.com</a></p>
 </body>
 </html>
