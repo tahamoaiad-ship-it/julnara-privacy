@@ -19,7 +19,7 @@
   </nav>
 
   <h1>Privacy Policy — Julnara</h1>
-  <p class="meta">Last updated: 22 October 2026 · Free · 18+ · package <code>app.julnara.mobile</code></p>
+  <p class="meta">Last updated: 24 October 2026 · release 9 · Free · 18+ · package <code>app.julnara.mobile</code></p>
 
   <h2>1. Who we are</h2>
   <p>Julnara is an Android voice assistant. Wake phrase detection for «جلنارا» runs on-device. After a wake, command audio and text may be sent to the developer’s server and processed by OpenAI and ElevenLabs to transcribe, understand, and speak replies (product voice «Ghada» when enabled). The app is for users 18+.</p>
@@ -32,7 +32,12 @@
     <li><strong>Spoken replies:</strong> reply text is converted to speech via ElevenLabs or OpenAI Speech on the server (<code>/v1/speak</code>) and returned to the device for playback.</li>
     <li><strong>Install / device token:</strong> created to bind the install to the server for spend and abuse limits — not for advertising.</li>
     <li><strong>Local data:</strong> tasks, reminders, notes, settings on device.</li>
-    <li><strong>Connect (optional):</strong> text/audio you explicitly choose to send.</li>
+    <li><strong>Connect chat:</strong> messages you type in Connect may be sent to our server and then to <strong>OpenAI</strong> to generate a reply. We <strong>do not store chat text on our server</strong>; the transcript stays on your phone.</li>
+    <li><strong>Support tickets:</strong> when you ask for help, a <strong>short problem summary</strong> may be sent only after your explicit consent in a dialog — not your full chat or voice recordings.</li>
+    <li><strong>Crash reports:</strong> with your consent only, technical data (e.g. stack trace, app version) may be sent to help us fix faults, avoiding full conversation audio where possible.</li>
+    <li><strong>Optional training:</strong> “Help Julnara learn” is <strong>off by default</strong> with a separate consent toggle. If enabled, short teaching examples may be stored to improve understanding; you can turn it off and delete data via Delete my data.</li>
+    <li><strong>Interpreter:</strong> in release 9, speech is transcribed on the server (<code>/v1/hear</code>). Android <code>SpeechRecognizer</code> is <strong>not enabled</strong> as the primary path.</li>
+    <li><strong>No voice call:</strong> the direct voice-call feature with Julnara in Connect was <strong>removed</strong> in release 9. Text chat and in-thread voice messages remain.</li>
     <li><strong>In-app report:</strong> may send a description of an inappropriate AI reply to the server for review.</li>
   </ul>
 
